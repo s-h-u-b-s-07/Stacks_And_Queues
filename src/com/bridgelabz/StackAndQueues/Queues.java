@@ -39,6 +39,17 @@ public class Queues {
         return count;
     }
 
+    public int deQueue(){
+        if(this.front == null){
+            System.out.println("Empty Queue.");
+            return -1;
+        }
+        Node temp = this.front;
+        this.front = this.front.next;
+        return temp.data;
+    }
+
+
     public void display() {
         Node temp = front;
         while (temp != null) {
@@ -47,5 +58,6 @@ public class Queues {
         }
         System.out.println("Null");
     }
+
 
 }
